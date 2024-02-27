@@ -4,3 +4,12 @@
 .poppins {
     font-family: "Poppins", sans-serif;
 }
+
+
+.post_div {
+    background-color: red;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 20px;
+    color: white;
+}
