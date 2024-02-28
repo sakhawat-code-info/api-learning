@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>A P I</title>
+    <title>A P I Phone</title>
 
     <!-- daisyUI from CDN  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -31,7 +31,34 @@
 
 <body class="poppins">
 
-    <main class="container  mx-auto mt-7">
+    <main class="container mx-auto pt-2 border-2 border-slate-400 min-h-screen">
+
+        <section class="text-center">
+            <div class="join">
+                <input type="text" class="input input-bordered join-item" placeholder="Search ..." />
+                <button class="btn join-item rounded-r-full bg-red-600">Search</button>
+            </div>
+        </section>
+
+        <section>
+            <div id="displayCardContainer" class="grid grid-cols-3 gap-4">
+                <!-- single container  -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
+                            class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Iphone 13 Pro Max</h2>
+                        <p>There are many variations of passages of available, but the majority have suffered</p>
+                        <div class="font-extrabold text-2xl">
+                            <p>$999</p>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary">Show Details</button>
+                        </div>
+                    </div>
+                </div>
 
 
 
@@ -39,32 +66,62 @@
 
 
 
+            </div>
+        </section>
 
 
-        <!-- ******************************** post section  -->
-        <!-- <div id="postSection">
 
-        </div> -->
-
-
-        <!-- ************************** user section -->
+        <!-- Modal code  -->
 
         <!-- <div>
-            <button onclick="userDataLoading()" class="btn btn-primary">Users Data</button>
-        </div>
+            <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+            <dialog id="my_modal_1" class="modal">
+                <div class="modal-box">
+                    <div class="text-center mb-7">
+                        <img src="" alt="img">
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Iphone 13 Pro Max</h3>
+                        <p class="py-4">It is a long established fact that a reader will be distracted by the readable
+                            content of a page when looking at its layout.</p>
+                        <p><span class="font-extrabold">Storage :</span> 128GB/256GB/1TB Storage, No card slot</p>
+                        <p><span class="font-extrabold">Display Size :</span> : 6.7 Inches, 109.8 cm</p>
+                        <p><span class="font-extrabold">Chipset :</span> 128GB/256GB/1TB Storage, No card slot</p>
+                        <p><span class="font-extrabold">Slug :</span> 128GB/256GB/1TB Storage, No card slot</p>
+                        <p><span class="font-extrabold">Release data :</span> 128GB/256GB/1TB Storage, No card slot</p>
+                        <p><span class="font-extrabold">Brand :</span> 128GB/256GB/1TB Storage, No card slot</p>
+                        <p><span class="font-extrabold">GPS :</span> 128GB/256GB/1TB Storage, No card slot</p>
+                    </div>
 
-        <div class="showData">
-            <ul id="li-container">
-
-            </ul>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <button class="btn bg-red-600">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
         </div> -->
+
+
+
+
+
+
+
+
+
+
+
 
 
     </main>
 
 
-    <script src="./script/utility.js"></script>
-    <script src="./script/script.js"></script>
+
+
+
+
+    <script src="./script/api-phone.js"></script>
 </body>
 
 </html>
