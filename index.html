@@ -35,12 +35,24 @@
 
         <section class="text-center">
             <div class="join">
-                <input type="text" class="input input-bordered join-item" placeholder="Search ..." />
-                <button class="btn join-item rounded-r-full bg-red-600">Search</button>
+                <input id="inputField" type="text" class="input input-bordered join-item" placeholder="Search ..." />
+                <button onclick="handleSearch()" id="searchBtn"
+                    class="btn join-item rounded-r-full bg-red-600">Search</button>
             </div>
         </section>
 
         <section>
+            <!-- add loader  -->
+            <div id="loaderSpinner" class="text-center flex items-center justify-center min-h-screen hidden">
+                <span class="loading loading-dots loading-xs"></span>
+                <span class="loading loading-dots loading-sm"></span>
+                <span class="loading loading-dots loading-md"></span>
+                <span class="loading loading-dots loading-lg"></span>
+            </div>
+
+
+            <!-- data show section by looping  -->
+
             <div id="displayCardContainer" class="grid grid-cols-3 gap-4">
                 <!-- single container  -->
 
@@ -61,16 +73,19 @@
                         </div>
                     </div>
 
-
                 </div> -->
-
-
-
-
-
-
-
             </div>
+
+            <div id="ShowAllBtnSection" class="text-center m-8 hidden">
+                <button class="btn btn-accent">Show All</button>
+            </div>
+
+
+
+
+
+
+
         </section>
 
 

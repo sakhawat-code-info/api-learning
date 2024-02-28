@@ -1,7 +1,7 @@
 
 
-const loadPhone = async () => {
-    const res = await fetch('https://openapi.programming-hero.com/api/phones?search=iphone');
+const loadPhone = async (searchText) => {
+    const res = await fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`);
     const data = await res.json();
     const phones = data.data;
     displayPhone(phones);
@@ -11,6 +11,22 @@ const loadPhone = async () => {
 const displayPhone = phones => {
     // console.log(phones);
     const displayCardContainer = document.getElementById('displayCardContainer');
+
+    // search deyar por ager item remove korar jonno
+    displayCardContainer.textContent = '';
+
+    // show all btn hidden code
+    const ShowAllBtnSection = document.getElementById('ShowAllBtnSection');
+
+    if (phones.length > 5) {
+        ShowAllBtnSection.classList.remove('hidden');
+    } else {
+        ShowAllBtnSection.classList.add('hidden');
+    }
+
+
+    // display only 5 phones
+    phones = phones.slice(0, 5);
 
     phones.forEach(phone => {
         // console.log(phone);
@@ -37,13 +53,30 @@ const displayPhone = phones => {
 
     }); // forEach
 
+    // hide loading spinner 
+    toggleLoadingSpinner(false);
+
 } // displayPhone()
 
+const handleSearch = () => {
+    // add loading spiner 
+    toggleLoadingSpinner(true);
+
+    // console.log('object');
+    const inputField = document.getElementById('inputField').value;
+    loadPhone(inputField);
+}
 
 
 
-
-loadPhone();
+const toggleLoadingSpinner = (isLoading) => {
+    const loaderSpinner = document.getElementById('loaderSpinner');
+    if (isLoading) {
+        loaderSpinner.classList.remove('hidden');
+    } else {
+        loaderSpinner.classList.add('hidden');
+    }
+}
 
 
 
